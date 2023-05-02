@@ -25,3 +25,4 @@ Auth::routes();
 Route::resource('mahasiswas', MahasiswaController::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/search', [MahasiswaController::class, 'search'])->name('search');
+Route::get('/nilai/{nim}', [MahasiswaController::class, 'nilai'])->name('nilai');

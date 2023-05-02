@@ -28,7 +28,9 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-
+    <marquee width="100%" direction="left" height="5%" bgcolor=#a7b0b8>
+        Isi data Anda dengan benar dan pastikan tidak ada data yang salah
+    </marquee>
     <table class="table table-bordered">
         <tr>
             <th>Nim</th>
@@ -56,6 +58,8 @@
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <a class="btn btn-warning" href="{{ route('nilai',$Mahasiswa->Nim) }}">Nilai</a>
                     </form>
                 </td>
             </tr>
