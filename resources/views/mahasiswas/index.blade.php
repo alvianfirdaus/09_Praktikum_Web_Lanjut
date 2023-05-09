@@ -35,6 +35,7 @@
         <tr>
             <th>Nim</th>
             <th>Nama</th>
+            <th>Foto</th>
             <th>TTL</th>
             <th>Kelas</th>
             <th>Jurusan</th>
@@ -46,6 +47,7 @@
             <tr>
                 <td>{{ $Mahasiswa->Nim }}</td>
                 <td>{{ $Mahasiswa->Nama }}</td>
+                <td><img width="100px" src="{{asset('storage/'.$Mahasiswa->Foto)}}"></td>
                 <td>{{ $Mahasiswa->Tanggal_Lahir }}</td>
                 <td>{{ $Mahasiswa->Kelas->nama_kelas }}</td>
                 <td>{{ $Mahasiswa->Jurusan }}</td>
@@ -57,7 +59,6 @@
                         <a class="btn btn-primary" href="{{ route('mahasiswas.edit', $Mahasiswa->Nim) }}">Edit</a>
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
                         <button type="submit" class="btn btn-danger">Delete</button>
                         <a class="btn btn-warning" href="{{ route('nilai',$Mahasiswa->Nim) }}">Nilai</a>
                     </form>
